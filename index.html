@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mital Solanki Resume</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .resume-container {
+        max-width: 850px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .left-column {
+        flex: 1;
+        padding-right: 30px;
+        min-width: 300px;
+      }
+
+      .right-column {
+        flex: 1;
+        padding-left: 30px;
+        border-left: 2px solid #4a90e2;
+        min-width: 300px;
+      }
+
+      /* Header */
+      h1 {
+        font-size: 32px;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #4a90e2;
+        margin-bottom: 10px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .header-bar {
+        height: 6px;
+        background: #4a90e2;
+        margin: 20px 0;
+        border-radius: 2px;
+        width: 100%;
+      }
+
+      /* Contact Info */
+      .contact-info {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+      .contact-info p {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #666;
+      }
+
+      .contact-info a {
+        color: #4a90e2;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .contact-info a:hover {
+        text-decoration: underline;
+      }
+
+      /* Section Styling */
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #333;
+        border-left: 5px solid #4a90e2;
+        padding-left: 10px;
+      }
+
+      .section p {
+        font-size: 16px;
+        line-height: 1.6;
+      }
+
+      .skills-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .skills-list li {
+        background-color: #f7f7f7;
+        padding: 8px 15px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 14px;
+        color: #333;
+      }
+
+      /* Experience Section */
+      .experience-item {
+        margin-bottom: 12px;
+      }
+
+      .experience-item p {
+        margin: 3px 0;
+      }
+
+      .experience-description {
+        font-size: 14px;
+        color: #555;
+        margin-left: 10px;
+      }
+
+      /* Button */
+      .download-btn {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+        padding: 10px;
+        background-color: #4a90e2;
+        color: #fff;
+        text-align: center;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+
+      .download-btn:hover {
+        background-color: #357ab7;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .resume-container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        .section h2 {
+          font-size: 20px;
+        }
+
+        .contact-info p,
+        .section p {
+          font-size: 14px;
+        }
+
+        .skills-list li {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="resume-container" id="resume">
+      <h1>MAHENDRA V SOLANKI</h1>
+      <div class="header-bar"></div>
+
+      <div class="contact-info">
+        <p>Ambedkar Nagar Street no 4, Kalawad Road Rajkot - 360005, India</p>
+        <p>
+          Phone: <a href="tel:+918460000513">8460000513</a> | Email:
+          <a href="mailto:solankimahi7592@gmail.com"
+            >solankimahi7592@gmail.com</a
+          >
+        </p>
+      </div>
+
+      <div class="left-column">
+        <div class="section">
+          <h2>Summary</h2>
+          <p>
+            Achieving personal and professional growth in all aspects of life
+            and what ever responsibility undertaken, which will be achieved by
+            being an effective team player and a responsibility leader.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>Skills</h2>
+          <ul class="skills-list">
+            <li>Cash Handling & Reconciliation</li>
+            <li>Team Supervision</li>
+            <li>Customer Service Excellence</li>
+            <li>POS System Proficiency</li>
+            <li>Problem Solving</li>
+            <li>Attention to Detail</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Personal Profile</h2>
+          <p><strong>Date of Birth:</strong> 19/09/98</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>Nationality:</strong> Indian</p>
+          <p><strong>Marital Status:</strong> Married</p>
+        </div>
+
+        <div class="section">
+          <h2>Languages Known</h2>
+          <ul class="skills-list">
+            <li>Gujarati</li>
+            <li>Hindi</li>
+            <li>English</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>Hobbies</h2>
+          <ul class="skills-list">
+            <li>Playing games</li>
+            <li>Reading books</li>
+            <li>Learning new things</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="right-column">
+        <div class="section">
+          <h2>Experience</h2>
+
+          <div class="experience-item">
+            <p>
+              <strong
+                >Aditya Birla Fashion & Retail LTD (Head cashier +
+                Manager)</strong
+              >
+              | 2022 to April/2025
+            </p>
+            <p class="experience-description">
+              Leading daily operations, managing team of cashiers, and ensuring
+              smooth store functioning while maintaining high customer
+              satisfaction.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <p>
+              <strong>Aditya Birla Fashion & Retail LTD (Head Cashier)</strong>
+              | 2020 to 2022
+            </p>
+            <p class="experience-description">
+              Supervised cash operations, trained new staff, and handled complex
+              customer transactions while maintaining accurate financial
+              records.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <p>
+              <strong>Aditya Birla Fashion & Retail LTD (Cashier)</strong>
+              | 2018 to 2020
+            </p>
+            <p class="experience-description">
+              Processed transactions efficiently, maintained accurate cash
+              handling, and provided excellent customer service.
+            </p>
+          </div>
+
+          <div class="experience-item">
+            <p>
+              <strong>Reliance Retail LTD (Cashier)</strong>
+              | 2016 to 2018
+            </p>
+            <p class="experience-description">
+              Handled daily sales transactions, maintained inventory records,
+              and assisted in store operations.
+            </p>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>Education and Training</h2>
+
+          <div class="education-item">
+            <p><strong>H.S.C</strong></p>
+            <p>March - 2017 | 50%</p>
+          </div>
+
+          <div class="education-item">
+            <p><strong>SSC</strong></p>
+            <p>March - 2014 | 48%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="download-btn" onclick="downloadPDF()">
+      Download as PDF
+    </button>
+
+    <button class="download-btn" onclick="downloadJPEG()">
+      Download as JPEG
+    </button>
+
+    <script>
+      async function downloadPDF() {
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF("portrait", "mm", "a4"); // Create A4 PDF
+
+        const resume = document.getElementById("resume");
+        const canvas = await html2canvas(resume, {
+          scale: 2, // Scale the canvas for better resolution
+        });
+
+        const imgData = canvas.toDataURL("image/png");
+        const imgWidth = 210; // A4 width in mm
+        const pageHeight = 297; // A4 height in mm
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+        let position = 0;
+
+        // Add image to PDF
+        pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+
+        // Save the PDF
+        pdf.save("mital_resume.pdf");
+      }
+
+      async function downloadJPEG() {
+        const resume = document.getElementById("resume");
+        const canvas = await html2canvas(resume, {
+          scale: 2, // Scale for better image quality
+        });
+
+        const imgData = canvas.toDataURL("image/jpeg", 1.0); // Generate high-quality JPEG
+
+        // Create a link element to download the image
+        const link = document.createElement("a");
+        link.href = imgData;
+        link.download = "resume.jpeg";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link); // Clean up
+      }
+    </script>
+  </body>
+</html>
