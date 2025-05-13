@@ -15,44 +15,45 @@
       }
 
       .resume-container {
-        max-width: 850px;
+        max-width: 1000px;
         margin: 20px auto;
         background-color: #fff;
-        padding: 30px;
+        padding: 40px;
         border-radius: 8px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-wrap: wrap;
+        min-height: 1122px; /* Ensures content fills A4 page height for PDF */
       }
 
       .left-column {
         flex: 1;
-        padding-right: 30px;
+        padding-right: 40px;
         min-width: 300px;
       }
 
       .right-column {
         flex: 1;
-        padding-left: 30px;
+        padding-left: 40px;
         border-left: 2px solid #4a90e2;
         min-width: 300px;
       }
 
       /* Header */
       h1 {
-        font-size: 32px;
+        font-size: 42px;
         text-transform: uppercase;
         font-weight: bold;
         color: #4a90e2;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         text-align: center;
         width: 100%;
       }
 
       .header-bar {
-        height: 6px;
+        height: 8px;
         background: #4a90e2;
-        margin: 20px 0;
+        margin: 25px 0;
         border-radius: 2px;
         width: 100%;
       }
@@ -60,13 +61,13 @@
       /* Contact Info */
       .contact-info {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         width: 100%;
       }
 
       .contact-info p {
-        margin: 5px 0;
-        font-size: 16px;
+        margin: 8px 0;
+        font-size: 18px;
         color: #666;
       }
 
@@ -82,52 +83,63 @@
 
       /* Section Styling */
       .section {
-        margin-bottom: 30px;
+        margin-bottom: 35px;
       }
 
       .section h2 {
-        font-size: 24px;
-        margin-bottom: 15px;
+        font-size: 28px;
+        margin-bottom: 20px;
         color: #333;
         border-left: 5px solid #4a90e2;
-        padding-left: 10px;
+        padding-left: 15px;
       }
 
       .section p {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.6;
       }
 
       .skills-list {
         display: flex;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 12px;
         padding: 0;
         list-style: none;
       }
 
       .skills-list li {
         background-color: #f7f7f7;
-        padding: 8px 15px;
+        padding: 10px 18px;
         border: 1px solid #ddd;
         border-radius: 4px;
-        font-size: 14px;
+        font-size: 16px;
         color: #333;
       }
 
       /* Experience Section */
       .experience-item {
-        margin-bottom: 12px;
+        margin-bottom: 32px;
       }
 
       .experience-item p {
-        margin: 3px 0;
+        margin: 5px 0;
+        font-size: 18px;
       }
 
       .experience-description {
-        font-size: 14px;
+        font-size: 16px;
         color: #555;
-        margin-left: 10px;
+        margin-left: 15px;
+      }
+
+      /* Education Section */
+      .education-item {
+        margin-bottom: 20px;
+      }
+
+      .education-item p {
+        font-size: 18px;
+        margin: 5px 0;
       }
 
       /* Button */
@@ -173,6 +185,19 @@
           font-size: 12px;
         }
       }
+
+      .job-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #222;
+      }
+      .job-years {
+        font-size: 18px;
+        font-weight: bold;
+        color: #4a90e2;
+        margin-bottom: 8px;
+        display: inline-block;
+      }
     </style>
   </head>
 
@@ -200,6 +225,13 @@
             being an effective team player and a responsibility leader.
           </p>
         </div>
+        <div class="section">
+          <h2>Personal Profile</h2>
+          <p><strong>Date of Birth:</strong> 19/09/1998</p>
+          <p><strong>Gender:</strong> Male</p>
+          <p><strong>Nationality:</strong> Indian</p>
+          <p><strong>Marital Status:</strong> Married</p>
+        </div>
 
         <div class="section">
           <h2>Skills</h2>
@@ -211,14 +243,6 @@
             <li>Problem Solving</li>
             <li>Attention to Detail</li>
           </ul>
-        </div>
-
-        <div class="section">
-          <h2>Personal Profile</h2>
-          <p><strong>Date of Birth:</strong> 19/09/98</p>
-          <p><strong>Gender:</strong> Male</p>
-          <p><strong>Nationality:</strong> Indian</p>
-          <p><strong>Marital Status:</strong> Married</p>
         </div>
 
         <div class="section">
@@ -246,11 +270,11 @@
 
           <div class="experience-item">
             <p>
-              <strong
+              <strong class="job-title"
                 >Aditya Birla Fashion & Retail LTD (Head cashier +
                 Manager)</strong
-              >
-              | 2022 to April/2025
+              ><br />
+              <span class="job-years">2022 to April/2025</span>
             </p>
             <p class="experience-description">
               Leading daily operations, managing team of cashiers, and ensuring
@@ -261,8 +285,10 @@
 
           <div class="experience-item">
             <p>
-              <strong>Aditya Birla Fashion & Retail LTD (Head Cashier)</strong>
-              | 2020 to 2022
+              <strong class="job-title"
+                >Aditya Birla Fashion & Retail LTD (Head Cashier)</strong
+              ><br />
+              <span class="job-years">2020 to 2022</span>
             </p>
             <p class="experience-description">
               Supervised cash operations, trained new staff, and handled complex
@@ -273,8 +299,10 @@
 
           <div class="experience-item">
             <p>
-              <strong>Aditya Birla Fashion & Retail LTD (Cashier)</strong>
-              | 2018 to 2020
+              <strong class="job-title"
+                >Aditya Birla Fashion & Retail LTD (Cashier)</strong
+              ><br />
+              <span class="job-years">2018 to 2020</span>
             </p>
             <p class="experience-description">
               Processed transactions efficiently, maintained accurate cash
@@ -284,8 +312,9 @@
 
           <div class="experience-item">
             <p>
-              <strong>Reliance Retail LTD (Cashier)</strong>
-              | 2016 to 2018
+              <strong class="job-title">Reliance Retail LTD (Cashier)</strong
+              ><br />
+              <span class="job-years">2016 to 2018</span>
             </p>
             <p class="experience-description">
               Handled daily sales transactions, maintained inventory records,
@@ -331,15 +360,11 @@
         const imgData = canvas.toDataURL("image/png");
         const imgWidth = 210; // A4 width in mm
         const pageHeight = 297; // A4 height in mm
-        const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-        let position = 0;
-
-        // Add image to PDF
-        pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
+        // Force image to fill the entire A4 page
+        pdf.addImage(imgData, "PNG", 0, 0, imgWidth, pageHeight);
 
         // Save the PDF
-        pdf.save("mital_resume.pdf");
+        pdf.save("mahendra_resume.pdf");
       }
 
       async function downloadJPEG() {
